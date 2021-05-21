@@ -15,6 +15,7 @@ export class ScalelineComponent implements OnInit {
 
   ngOnInit(): void {
     this.control = new ControlScaleLine({
+      units: 'metric',
       target: this.elementRef.nativeElement,
     });
     this.map.addControl(this.control);
