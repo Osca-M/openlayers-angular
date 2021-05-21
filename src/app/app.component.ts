@@ -9,7 +9,7 @@ import OSM from 'ol/source/OSM';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  map: Map;
+  map: any;
 
   ngOnInit(): void {
     this.map = new Map({
