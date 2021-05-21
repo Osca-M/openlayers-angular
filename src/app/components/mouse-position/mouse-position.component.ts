@@ -24,6 +24,7 @@ export class MousePositionComponent implements OnInit {
   @Input() map!: Map;
   @Input() positionTemplate!: string;
   control!: ControlMousePosition;
+  coords: any;
   constructor(
     private element: ElementRef,
     private coordinateFormatter: CoordinateFormatterService,
@@ -32,11 +33,10 @@ export class MousePositionComponent implements OnInit {
   ngOnInit(): void {
     this.control = new ControlMousePosition({
       className: 'mouseposition-control',
-      coordinateFormat: (coordinates) => this.coordinateFormatter.numberCoordinates(coordinates, 4, this.positionTemplate),
+      coordinateFormat: (coordinates) => this.coordinateFormatter.numberCoordinates( this.coords = coordinates, 4, this.positionTemplate),
       target: this.element.nativeElement,
       undefinedHTML: undefined,
     });
-    // console.log(this.coordinateFormatter.numberCoordinates(coordinates, 4, this.positionTemplate))
     this.map.addControl(this.control);
   }
 
