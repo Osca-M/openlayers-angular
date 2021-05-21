@@ -6,16 +6,20 @@ import { MapComponent } from './components/map/map.component';
 import { ScalelineComponent } from './components/scaleline/scaleline.component';
 import { MousePositionComponent } from './components/mouse-position/mouse-position.component';
 import {DecimalPipe} from "@angular/common";
+import { MapLayersComponent } from './components/map-layers/map-layers.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     ScalelineComponent,
-    MousePositionComponent
+    MousePositionComponent,
+    MapLayersComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [DecimalPipe],
   bootstrap: [AppComponent]
