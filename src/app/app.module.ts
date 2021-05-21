@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
+import { ScalelineComponent } from './components/scaleline/scaleline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    ScalelineComponent
   ],
   imports: [
     BrowserModule
