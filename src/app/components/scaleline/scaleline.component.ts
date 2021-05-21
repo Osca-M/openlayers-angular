@@ -9,8 +9,8 @@ import ControlScaleLine from 'ol/control/ScaleLine';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScalelineComponent implements OnInit {
-  @Input() map: any;
-  control: any;
+  @Input() map!: Map;
+  control!: ControlScaleLine;
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {

@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 100vh;
 }
-header {
+header[_ngcontent-cwb-c14=""] {
     background-color: var(--header-color);
     padding: 2em;
 }
@@ -22,6 +22,8 @@ main {
     flex-grow: 1;
 }
 footer {
+    display: flex;
     background-color: var(--header-color);
     padding: 1em;
+    justify-content: space-between;
 }

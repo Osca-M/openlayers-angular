@@ -1,12 +1,13 @@
-<header>
-  <div class="title">Map Viewer - Openlayers & Angular</div>
+<header _ngcontent-cwb-c14="">
+  <div _ngcontent-cwb-c14="" class="title">Map Viewer - Openlayers & Angular</div>
 </header>
 <main>
   <div class="left-bar"></div>
-  <div id="ol-map" class="map-container">
+  <div class="map-container">
     <app-map [map]="map"></app-map>
   </div>
 </main>
 <footer>
-  Footer
+  <app-scaleline [map]="map"></app-scaleline>
+  <app-mouse-position [map]="map" positionTemplate="{x}, {y} m"></app-mouse-position>
 </footer>

@@ -10,7 +10,7 @@ import Map from 'ol/Map';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MapComponent implements OnInit {
-  @Input() map: any;
+  @Input() map!: Map;
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit(): void {
